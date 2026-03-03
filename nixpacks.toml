@@ -5,4 +5,4 @@ cmds = ["cd restaurant-app-backend && npm install"]
 cmds = []
 
 [start]
-cmd = "PORT=8080 node restaurant-app-backend/server.js"
+cmd = "node restaurant-app-backend/migrate.js && node restaurant-app-backend/server.js"
