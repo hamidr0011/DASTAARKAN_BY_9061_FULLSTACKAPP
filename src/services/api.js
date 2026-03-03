@@ -1,10 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const BASE_URL = 'http://192.168.1.19:5000/api';
-// Replace YOUR_BACKEND_IP with:
-// - 'localhost' for iOS simulator
-// - '10.0.2.2' for Android emulator
-// - Your actual IP address for physical device (Currently set to 192.168.1.19)
+const BASE_URL = 'https://assignmentno2madby9061-production.up.railway.app/api';
+// Backend is deployed on Railway at the above URL
+
 
 const getHeaders = async () => {
     const session = await AsyncStorage.getItem('@dastarkhan_user_session');
