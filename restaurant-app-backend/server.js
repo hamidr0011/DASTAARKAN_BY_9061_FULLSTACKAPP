@@ -104,10 +104,10 @@ app.use((err, req, res, next) => {
 
 const startServer = async () => {
     await runMigrations();
-    app.listen(PORT, '0.0.0.0', () => {
-        console.log(`Dastarkhan API running on port ${PORT}`);
+    app.listen(5000, '0.0.0.0', () => {
+        console.log(`Dastarkhan API running on port 5000`);
         console.log(`Database: PostgreSQL via Railway`);
-        console.log(`Health check: http://localhost:${PORT}/health`);
+        console.log(`Health check: http://0.0.0.0:5000/health`);
     });
 };
 
