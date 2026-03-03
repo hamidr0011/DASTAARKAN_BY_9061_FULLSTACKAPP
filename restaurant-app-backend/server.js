@@ -102,9 +102,13 @@ app.use((err, req, res, next) => {
     res.status(500).json({ success: false, error: 'Internal server error' });
 });
 
-app.listen(PORT, async () => {
+const startServer = async () => {
     await runMigrations();
-    console.log(`Dastarkhan API running on port ${PORT}`);
-    console.log(`Database: PostgreSQL via Railway`);
-    console.log(`Health check: http://localhost:${PORT}/health`);
-});
+    app.listen(PORT, '0.0.0.0', () => {
+        console.log(`Dastarkhan API running on port ${PORT}`);
+        console.log(`Database: PostgreSQL via Railway`);
+        console.log(`Health check: http://localhost:${PORT}/health`);
+    });
+};
+
+startServer();
